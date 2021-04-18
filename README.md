@@ -1,1 +1,1 @@
-https://origamimm.github.io/Lab2/
+https://origamimm.github.io/sp21-cse110-lab3/
