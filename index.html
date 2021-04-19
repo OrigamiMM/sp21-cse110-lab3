@@ -9,105 +9,128 @@
         <link rel="manifest" href="/site.webmanifest">
     </head>
     <body>
-        <h1>Oscar Acevedo Journal Entires</h1>
-        <div>
-            <div>
-                <h2>Monday April 5th, 2021</h2>
-                <h3>The Busy Day</h3>
-                <h4>Highlights & Lowlights</h4>
-                <ul>
-                    <li>H: Attended all of my live lectures so far in the quarter</li>
-                    <li>L: This is the first day of having my shift in the afternoon, making to day really busy</li>
-                </ul>
-                <h4>Tasks To Do</h4>
+        <header>
+            <h1>Lab 2</h1>
+        </header>
+        <main>
+            <h2>Oscar Acevedo Journal Entires</h2>
+            <details>
+                <summary>Requirements for Lab</summary>
+                Must create a html form that includes many html elements. Includes: document metadata, comment sectioning, text content, 
+                inline semantics, images/media, interactive elements, and forms
+            </details>
+            <nav class="navigation">
                 <ol>
-                    <li>Meet with my CSE 101 HW group and start on HW</li>
-                    <li>Write out tasks for the rest of the week</li>
+                    <li><a href="#ent">View Entires</a></li>
+                    <li><a href="#jEntry">Create Entry</a></li>
                 </ol>
-                <p>Today was a really tiring day. Have lecture at the start of the morning with an hour break until next lectures and meeting. 
-                    Leads into shift till I get back to work on HW. The first time I actually have a busy day. Listened to this song for the first time
-                        today, it was really nice.</p>
-                <audio controls>
-                    <source src="precisoMeEncontrar.mp3" type="audio/mpeg">
-                </audio>
+            </nav>
+            <section id = "ent">
+                <div>
+                    <h2><span class="date">April 5th, 2021</span> </h2>
+                    <h3>The Busy Day</h3>
+                    <h4>Highlights & Lowlights</h4>
+                    <ul>
+                        <li>H: Attended all of my live lectures so far in the quarter</li>
+                        <li>L: This is the first day of having my shift in the afternoon, making to day really busy</li>
+                    </ul>
+                    <h4>Tasks <em>To Do</em></h4>
+                    <ol>
+                        <li>Meet with my CSE 101 HW group and start on HW</li>
+                        <li>Write out tasks for the rest of the week</li>
+                    </ol>
+                    <p>Today was a really tiring day. Have lecture at the start of the morning with an hour break until next lectures and meeting. 
+                        Leads into shift till I get back to work on HW. The first time I actually have a busy day. Listened to this song for the first time
+                            today, it was really nice.</p>
+                    <audio controls>
+                        <source src="precisoMeEncontrar.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div>
+                    <h2><span class="date">April 6th, 2021</span></h2>
+                    <h3>The Easy Day</h3>
+                    <h4>Highlights & Lowlights</h4>
+                    <ul>
+                        <li>H: Took a break day to recharge</li>
+                        <li>L: Missed out on a lot of work to make highlight happen</li>
+                        <li>L: Missed first live lecture</li>
+                    </ul>
+                    <h4>Tasks <em>To Do</em></h4>
+                    <ol>
+                        <li>Catch up on missed lecture for the day</li>
+                        <li>Meet with 101 Group to continue with the HW</li>
+                        <li>Talk to the other team leader that was assigned today</li>
+                    </ol>
+                    <p>Today was a really lax day, after yesterday, wanted to take my first recharge day of the quarter(that wasn't a weekend).
+                        I saw my first <b>TLC</b> show, was actually really enjoyable. 
+                    </p>
+                    <img src="tvShow.jpg" alt="TV Show" style="width: 250px;height: 150px;">
+                </div>
+                <div>
+                    <h2><span class="date">April 7th, 2021</span></h2>
+                    <h3>The Due Day</h3>
+                    <h4>Highlights & Lowlights</h4>
+                    <ul>
+                        <li>H: Have new Alarm clock to help me get the day started.</li>
+                        <li>H: Played Video games for the first time in a while with friends</li>
+                        <li>L: Missed a lecture again</li>
+                    </ul>
+                    <h4>Tasks <em>To Do</em></h4>
+                    <ol>
+                        <li>Complete the 101 Homework</li>
+                        <li>Study for the Phil 28 quiz on friday</li>
+                        <li>Start the 110 Lab</li>
+                    </ol>
+                    <p>Today was another lax day. Decided to drop a class to take it easy this quarter. Took a lot last quarter so I wont lose any progress from dropping this quarter. 
+                        Also have some morning shifts so this new alarm clock should help out in waking up on time.</p>
+                    <video width="320" height="240" controls>
+                        <source src="alarm.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </section>
+
+            <hr>
+
+            <div id="jEntry">
+                <h2>Journal Entry</h2>
+                <form>
+                    <fieldset>
+                        <legend>Entry</legend>
+                            <label for="date">Today's Date</label><br>
+                            <input type="date" id="date" min="2021-01-01"><br>
+                            <label for="sub">Subtitle</label><br>
+                            <input type="text" id="sub"><br>
+                            <label for="color-choice">What Color did you feel today was?</label><br>
+                            <input list="color" id="color-choice" name="color-choice"/><br>
+                            <datalist id="color">
+                                <option value="Green">Green</option>
+                                <option value="Red">Red</option>
+                                <option value="Purple">Purple</option>
+                                <option value="Yellow">Yellow</option>
+                                <option value="Blue">Blue</option>
+                            </datalist>
+                            <label for="lights">Highlights & Lowlights</label><br>
+                            <input type="text" id="lights"><br>
+                            <label for="toDo">To Do's</label><br>
+                            <input type="text" id="toDo"><br>
+                            <label for="para">Paragraph Entry</label><br>
+                            <input type="text" id="para"><br>
+                            <label for="emotion">What was a big emotion for today?</label><br>
+                            <select id="emotion">
+                                <option value="Happiness">Happiness</option>
+                                <option value="Sadness">Sadness</option>
+                                <option value="Anger">Anger</option>
+                                <option value="Disgust">Disgust</option>
+                                <option value="None">None</option>
+                            </select><br>
+                            <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
             </div>
-            <div>
-                <h2>Tuesday April 6th, 2021</h2>
-                <h3>The Easy Day</h3>
-                <h4>Highlights & Lowlights</h4>
-                <ul>
-                    <li>H: Took a break day to recharge</li>
-                    <li>L: Missed out on a lot of work to make highlight happen</li>
-                    <li>L: Missed first live lecture</li>
-                </ul>
-                <h4>Tasks To Do</h4>
-                <ol>
-                    <li>Catch up on missed lecture for the day</li>
-                    <li>Meet with 101 Group to continue with the HW</li>
-                    <li>Talk to the other team leader that was assigned today</li>
-                </ol>
-                <p>Today was a really lax day, after yesterday, wanted to take my first recharge day of the quarter(that wasn't a weekend).
-                    I saw my first <b>TLC</b> show, was actually really enjoyable. 
-                </p>
-                <img src="tvShow.jpg" alt="TV Show" style="width: 250px;height: 150px;">
-            </div>
-            <div>
-                <h2>Wednesday April 7th, 2021</h2>
-                <h3>The Due Day</h3>
-                <h4>Highlights & Lowlights</h4>
-                <ul>
-                    <li>H: Have new Alarm clock to help me get the day started.</li>
-                    <li>H: Played Video games for the first time in a while with friends</li>
-                    <li>L: Missed a lecture again</li>
-                </ul>
-                <h4>Tasks To Do</h4>
-                <ol>
-                    <li>Complete the 101 Homework</li>
-                    <li>Study for the Phil 28 quiz on friday</li>
-                    <li>Start the 110 Lab</li>
-                </ol>
-                <p>Today was another lax day. Decided to drop a class to take it easy this quarter. Took a lot last quarter so I wont lose any progress from dropping this quarter. 
-                    Also have some morning shifts so this new alarm clock should help out in waking up on time.</p>
-                <video width="320" height="240" controls>
-                    <source src="alarm.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-        <div>
-            <h2>Journal Entry</h2>
-            <form>
-                <fieldset>
-                    <legend>Entry</legend>
-                        <label for="date">Today's Date</label><br>
-                        <input type="date" id="date" min="2021-01-01"><br>
-                        <label for="sub">Subtitle</label><br>
-                        <input type="text" id="sub"><br>
-                        <label for="color-choice">What Color did you feel today was?</label><br>
-                        <input list="color" id="color-choice" name="color-choice"/><br>
-                        <datalist id="color">
-                            <option value="Green">Green</option>
-                            <option value="Red">Red</option>
-                            <option value="Purple">Purple</option>
-                            <option value="Yellow">Yellow</option>
-                            <option value="Blue">Blue</option>
-                        </datalist>
-                        <label for="lights">Highlights & Lowlights</label><br>
-                        <textarea name="lightsArea" id="lights" cols="50" rows = "4"></textarea><br>
-                        <label for="toDo">To Do's</label><br>
-                        <textarea name="toDoArea" id="toDo" cols="50" rows = "4"></textarea><br>
-                        <label for="para">Paragraph Entry</label><br>
-                        <textarea name="paraEntry" id="para" cols="50" rows = "6"></textarea><br>
-                        <label for="emotion">What was a big emotion for today?</label><br>
-                        <select id="emotion">
-                            <option value="Happiness">Happiness</option>
-                            <option value="Sadness">Sadness</option>
-                            <option value="Anger">Anger</option>
-                            <option value="Disgust">Disgust</option>
-                            <option value="None">None</option>
-                        </select><br>
-                        <input type="submit" value="Submit">
-                </fieldset>
-            </form>
-        </div>
+        </main>
+        <footer>
+            <p>Oscar Acevedo</p>
+            <p>2021</p>
+        </footer>
     </body>
 </html>
