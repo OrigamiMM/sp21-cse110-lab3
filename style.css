@@ -1,0 +1,134 @@
+/* comment
+col
+background
+Unit
+Box Model 
+    Margin
+    Padding
+    Borders
+Text
+    color
+    text-decoration
+    text align
+display
+sizing
+position
+psuedo class
+layouts
+reposnive
+fonts*/
+@media (min-width: 400px), screen and (orientation: portrait){
+    body{
+        background-color: red;
+    }
+}
+h2[class~="date"]{
+    text-decoration: navy underline;
+    font-size: xx-large;
+    text-align: center;
+}
+h3[class~="sub"]{
+    text-decoration: navy wavy underline;
+}
+
+h4[class="tasks"], h4[class="highAndLow"]{
+    text-decoration: underline;
+}
+
+.navigation{
+    background-color: hsl(200, 93%, 73%);
+    color: white;
+    width: 50%;
+    height: 70px;
+    margin: auto;
+
+    padding: 5px 10px 5px 10px;
+    display: block;
+
+    border-style: solid;
+    border-color: #37718E;
+    border-width: 5px;
+    border-radius: 10px;
+
+    box-shadow: 5px 5px 5px #37718E;
+}
+
+.Entry{
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 0px 10px 10px 20px;
+
+    display: inline-block;
+    
+    border-style: solid;
+    border-color: #37718E;
+    border-width: 5px;
+    border-radius: 10px;
+
+    box-shadow: 5px 5px 5px #37718E;
+}
+
+.Entry li{
+    list-style-type: circle;
+}
+
+.Entry > h3{
+    font-size: larger;
+}
+.media{
+    position: static;
+}
+
+.jEntry{
+    background-color: rgb(255,255,255);
+    margin: 0.5in 2cm 0.5in 2cm;
+    padding-top: 5px;
+    padding-left: 1.5em;
+    padding-right: 1em;
+    padding-bottom: 3vh;
+
+    border-style: solid;
+    border-color: #37718E;
+    border-width: 5px;
+    border-radius: 10px;
+
+    box-shadow: 5px 5px 5px #37718E;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h4 ~ p{
+    color: #ff0000;
+}
+
+li:first-of-type + li{
+    color: navy;
+}
+
+#submitButton{
+    min-width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: #254E70;
+    color: white;
+
+    position: relative;
+    top: 5px;
+}
+#submitButton:hover{
+    background-color: white;
+    color: #254E70;
+}
+#submitButton:active{
+    background-color: #C33C54;
+    color: white;
+}
